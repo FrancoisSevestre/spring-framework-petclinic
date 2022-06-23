@@ -29,8 +29,8 @@ spec:
   type: NodePort
   ports:
   - protocol: TCP
-   port: 80
-   targetPort: 80
-   nodePort: 3080
+    port: 80
+    targetPort: 80
+    nodePort: 3080
   selector:
     app: petclinic
