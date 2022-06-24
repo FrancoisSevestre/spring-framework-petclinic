@@ -18,6 +18,7 @@ spec:
       containers:
       - name: petclinic
         image: projetdevopsfn/petclinic:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
 ---
