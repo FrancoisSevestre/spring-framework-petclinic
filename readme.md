@@ -102,7 +102,6 @@ As an example, you may use the `-Dspring.profiles.active=jdbc` VM options to sta
 ./mvnw jetty:run-war -Dspring.profiles.active=jdbc
 ```
 
-
 ## Working with Petclinic in your IDE
 
 ### Prerequisites
