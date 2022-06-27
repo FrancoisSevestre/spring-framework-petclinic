@@ -12,7 +12,7 @@
     <url>https://spring-petclinic.github.io/</url>
 
     <properties>
-
+        
         <!-- Generic properties -->
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -46,7 +46,7 @@
         <hibernate-validator.version>6.2.0.Final</hibernate-validator.version>
         <hsqldb.version>2.5.2</hsqldb.version>
         <h2database.version>1.4.200</h2database.version>
-
+             
         <!-- Logging -->
         <slf4j.version>1.7.32</slf4j.version>
         <logback.version>1.2.6</logback.version>
@@ -374,6 +374,12 @@
                     </descriptorRefs>
                 </configuration>
             </plugin>
+            
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>8.9.8</version>
+            </plugin>
 
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -511,7 +517,7 @@
                 <db.script>mysql</db.script>
                 <jpa.database>MYSQL</jpa.database>
                 <jdbc.driverClassName>com.mysql.cj.jdbc.Driver</jdbc.driverClassName>
-                <jdbc.url>jdbc:mysql://localhost:3306/petclinic?useUnicode=true</jdbc.url>
+                <jdbc.url>jdbc:mysql://151.106.9.1:9003/petclinic?useUnicode=true</jdbc.url>
                 <jdbc.username>petclinic</jdbc.username>
                 <jdbc.password>petclinic</jdbc.password>
             </properties>

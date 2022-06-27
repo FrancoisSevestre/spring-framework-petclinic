@@ -1,4 +1,4 @@
-# Spring PetClinic Sample Application
+# PetClinic by Nicolas Guillaudeux & Francois Sevestre
 
 [![Java CI with Maven](https://github.com/spring-petclinic/spring-framework-petclinic/actions/workflows/maven-build.yml/badge.svg)](https://github.com/spring-petclinic/spring-framework-petclinic/actions/workflows/maven-build.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=spring-petclinic_spring-framework-petclinic&metric=alert_status)](https://sonarcloud.io/dashboard?id=spring-petclinic_spring-framework-petclinic)
@@ -6,7 +6,7 @@
 
 Approved by the Spring team, this repo is a fork of the [spring-projects/spring-petclinic](https://github.com/spring-projects/spring-petclinic).
 It allows the Spring community to maintain a Petclinic version with a plain old **Spring Framework configuration**
-and with a **3-layer architecture** (i.e. presentation --> service --> repository).
+and with a **3-layer architecture ** (i.e. presentation --> service --> repository).
 The "canonical" implementation is now based on Spring Boot, Thymeleaf and [aggregate-oriented domain]([https://github.com/spring-projects/spring-petclinic/pull/200). 
 
 
@@ -102,7 +102,6 @@ As an example, you may use the `-Dspring.profiles.active=jdbc` VM options to sta
 ./mvnw jetty:run-war -Dspring.profiles.active=jdbc
 ```
 
-
 ## Working with Petclinic in your IDE
 
 ### Prerequisites
@@ -177,22 +176,6 @@ The following items should be installed in your system:
 | JDBC | [business-config.xml](src/main/resources/spring/business-config.xml), [jdbc folder](src/main/java/org/springframework/samples/petclinic/repository/jdb) |
 | JPA | [business-config.xml](src/main/resources/spring/business-config.xml), [jpa folder](src/main/java/org/springframework/samples/petclinic/repository/jpa) |
 | Spring Data JPA | [business-config.xml](src/main/resources/spring/business-config.xml), [springdatajpa folder](src/main/java/org/springframework/samples/petclinic/repository/springdatajpa) |
-
-
-## Publishing a Docker image
-
-This application uses [Google Jib]([https://github.com/GoogleContainerTools/jib) to build an optimized Docker image
-into the [Docker Hub](https://cloud.docker.com/u/springcommunity/repository/docker/springcommunity/spring-framework-petclinic/)
-repository.
-The [pom.xml](pom.xml) has been configured to publish the image with a the `springcommunity/spring-framework-petclinic` image name.
-
-Jib containerizes this WAR project by using the [distroless Jetty](https://github.com/GoogleContainerTools/distroless/tree/master/java/jetty) as a base image.
-
-Build and push the container image of Petclinic to the Docker Hub registry:
-```
-mvn jib:build
-```
-
 
 ## Interesting Spring Petclinic forks
 
